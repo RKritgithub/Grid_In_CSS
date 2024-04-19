@@ -1,0 +1,64 @@
+<!-- TASK 5
+Problem Statement
+Explain the difference between justify-items and justify-self using code examples. -->
+<!-- SOLUTIONS: -->
+<!-- justify-items: -->
+<!-- This property aligns all grid items within their respective grid cells along the inline axis.
+It applies to all grid items within the grid container.
+It sets the default alignment for all grid items. -->
+<!-- justify-self: -->
+<!-- This property aligns a specific grid item within its grid cell along the inline axis.
+It applies to individual grid items.
+It allows you to override the default alignment set by justify-items for a specific grid item. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>justify-items vs justify-self</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 100px 100px; /* defining explicit columns */
+      grid-template-rows: 100px 100px; /* defining explicit rows */
+      gap: 10px; /* gap between grid items */
+      justify-items: center; /* default alignment for all grid items */
+    }
+
+    .item {
+      background-color: lightblue;
+      border: 1px solid black;
+    }
+
+    .item1 {
+      justify-self: start; /* override default alignment for this item */
+    }
+
+    .item2 {
+      justify-self: end; /* override default alignment for this item */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</body>
+</html>
+
+<!-- container is a grid container with two columns and two rows.
+justify-items: center; aligns all grid items horizontally to the center by default.
+.item1 overrides the default alignment for the first grid item, aligning it to the start of the cell.
+.item2 overrides the default alignment for the second grid item, aligning it to the end of the cell.
+So, justify-items sets the default alignment for all grid items, while justify-self allows you to individually control the alignment of specific grid items.
+ -->
+
+
+
+
+
+

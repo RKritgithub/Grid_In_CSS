@@ -1,0 +1,51 @@
+<!-- TASK 3
+Problem Statement
+Explain the use of grid-auto-row and grid-auto-column using code examples. -->
+<!-- SOLUTION: -->
+<!-- grid-auto-row and grid-auto-column are properties in CSS Grid Layout that allow you to define the size of implicitly created rows and columns when grid items are placed outside of explicitly defined rows and columns. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Auto Rows and Columns</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 100px 100px; /* defining explicit columns */
+      grid-template-rows: 100px 100px; /* defining explicit rows */
+      grid-auto-rows: 50px; /* setting the height of implicitly created rows */
+      grid-auto-columns: 50px; /* setting the width of implicitly created columns */
+      gap: 10px; /* gap between grid items */
+    }
+
+    .item {
+      background-color: lightblue;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+  </div>
+</body>
+</html>
+
+<!-- grid-template-columns and grid-template-rows are used to explicitly define the size of columns and rows respectively.
+grid-auto-rows and grid-auto-columns define the size of rows and columns that are implicitly created when grid items are placed outside of the explicitly defined grid.
+If you add more items than the number of explicitly defined rows and columns, the grid will automatically create additional rows and columns according to the specified sizes.
+In this case, each implicitly created row will have a height of 50px and each implicitly created column will have a width of 50px. -->
+
+
+
+
+
